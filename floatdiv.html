@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #box {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: #008000;
+            text-align: center;
+            line-height: 100px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #FFFFFF;
+            border-radius: 5px;
+            animation: l-t 10s;
+        }
+
+        @keyframes l-t {
+
+            /*各个节点都要设计好*/
+            0% {
+                transform: rotate(0deg);
+                left: 0;
+            }
+
+            20% {
+                transform: rotate(20deg);
+                left: 0;
+            }
+
+            50% {
+                transform: rotate(0deg);
+                left: 500px;
+            }
+
+            70% {
+                transform: rotate(0deg);
+                left: 500px;
+            }
+
+            100% {
+                transform: rotate(-720deg);
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">滚动漂移</div>
+</body>
+
+</html>

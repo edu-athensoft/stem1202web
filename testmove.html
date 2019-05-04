@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <style>
+        #random {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    
+    </style>
+</head>
+<body>
+    
+    <div id="random">
+
+    </div>
+
+    <script>
+        function moveDiv() {
+            var $span = $("#random");
+        
+            $span.fadeOut(1000, function() {
+                var maxLeft = $(window).width() - $span.width();
+                var maxTop = $(window).height() - $span.height();
+                var leftPos = Math.floor(Math.random() * (maxLeft + 1));
+                var topPos = Math.floor(Math.random() * (maxTop + 1));
+                console.log(leftPos+","+topPos);
+        
+                $span.css({ left: leftPos, top: topPos }).fadeIn(1000);
+            });
+        };
+        
+        moveDiv();
+        setInterval(moveDiv, 2000);
+    
+    </script>
+</body>
+</html>
